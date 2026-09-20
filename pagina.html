@@ -17,6 +17,19 @@
 
     </header>
     <main>
+        <section>
+            <div class="bg-black/30 p-5 rounded-2xl border border-white/10 space-y-3 text-sm">
+                    <h4 class="font-bold text-white flex items-center gap-2">
+                        ¿Cómo funciona para toda la pantalla?
+                    </h4>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-300 text-xs md:text-sm">
+                        <li><strong>Contenedor principal:</strong> Se aplica un contenedor con <code class="bg-white/10 px-1 py-0.5 rounded text-indigo-300">min-height: 100vh</code> y <code class="bg-white/10 px-1 py-0.5 rounded text-indigo-300">width: 100%</code>.</li>
+                        <li><strong>backdrop-filter: blur():</strong> Esta propiedad es la clave. Aplica un desenfoque Gaussiano a <em>todo lo que esté detrás</em> de la capa, sin afectar a los textos o botones dentro de ella.</li>
+                        <li><strong>background-color (RGBA):</strong> Debe usarse un color con opacidad transparente (canal alfa), como <code class="bg-white/10 px-1 py-0.5 rounded text-indigo-300">rgba(0, 0, 0, 0.4)</code>. Nunca uses <code class="bg-white/10 px-1 py-0.5 rounded text-rose-300">opacity</code> de CSS puro, ya que opacará las letras.</li>
+                        <li><strong>Compatibilidad:</strong> Se incluye siempre la propiedad con prefijo <code class="bg-white/10 px-1 py-0.5 rounded text-indigo-300">-webkit-backdrop-filter</code> para asegurar compatibilidad total con Safari y navegadores basados en WebKit.</li>
+                    </ul>
+                </div>
+        </section>
         <nav>
         <ul>
             <li><a href="./Paginas/Nosotros.html">Nosotros</a></li>
@@ -24,6 +37,9 @@
             <li><a href="./Paginas/Nosotros.html">Contacto</a></li>
         </ul>
     </nav>
-    </main>    
+    </main>
+    <footer>
+        
+    </footer>    
 </body>
 </html>
