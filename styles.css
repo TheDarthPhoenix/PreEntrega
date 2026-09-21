@@ -1,33 +1,73 @@
-   /* Aplica esta clase a tu contenedor principal (pantalla completa) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+/*Fondo con la imagen del patron */
 body {
-  /* Ancho y alto completo para cubrir toda la ventana */
+/* Ancho y alto completo para cubrir toda la ventana */
 min-height: 100vh;
 width: 100%;
-
-  /* 1. Fondo semitransparente (RGBA) */
+/* Ruta a la imagen de fondo*/
 background-image: url(Imagenes/flat-african-pattern-design.png);
-background-color: rgba(0, 0, 0, 0.35);
-
-  /* 2. EFECTO ESMERILADO (Backdrop Blur) */
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px); /* Para Safari */
-
-  /* 3. Color de texto y sombra opcional */
+background-repeat: cover;
+background-position: center;
 color: #FFFFFF;
+}
+
+/* 2. Capa que desenfoque la imagen del Body y aplica color oscuro*/
+.glass-overlay{
+min-height: 100vh;
+width: 100%;
+/*Tinte semitransparente oscuro para contrastar el texto*/
+background-color: rgba(0, 0, 0, 0.45);
+/* Efecto ESMERILADO sobre imagen del body */
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px); 
+padding: 20px;
 text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
+
+/* Estilo del Logo */
 .logo{
     height: 200px;
-    width: fit-content;
+    width: auto;
     display: block; 
     margin: 0 auto;
-    padding: px;
-    border-radius: 0%;
 }
+
+/* Estilo de navegacion y listas */
 ul {
 font-family: "Fontdiner Swanky", serif;
 font-weight: 400;
 font-style: normal;
-font-size: xx-large;
-text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+font-size: x-large;
+list-style-position: inside;
+}
+
+nav a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Clases auxiliares para las tarjetas */
+.bg-white\/5 {
+    background-color: rgb(255, 255, 255 / 0.08);
+}
+.p-6 {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.border-white\/10{
+    border-color: rgb(255, 255, 255 / 0.15);
+}
+.border{
+    border-style: solid;
+    border-width: 1px;
+}
+.rounded-2x1{
+    border-radius: 1rem;
+}
+.shadow-lg {
+    box-shadow: 0 10px 15px -3x rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
 }
